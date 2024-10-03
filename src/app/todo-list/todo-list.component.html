@@ -1,4 +1,8 @@
 <ul>
-  <li *ngFor="let i of getTodo()">{{i.title}}</li>
+  <li *ngFor="let i of todo">
+   <p>{{i.title}} - {{i.id}}</p>
+   <p>Complited: {{i.complited}}</p>
+   <input type="checkbox" (change)="activeTodo(i.id)">
+   <button type="button" (click)="onDeleteTodo(i.id)">Delete</button>
+  </li>
 </ul>
-<h1>hello</h1>

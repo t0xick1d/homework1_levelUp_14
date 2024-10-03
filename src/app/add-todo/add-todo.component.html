@@ -1,1 +1,7 @@
-<h1>add-todo works!</h1>
+<div>
+ <label for="">
+  Add todo
+  <input type="text" [(ngModel)]="todoTitle">
+ </label>
+ <button (click)="onAddTodo(todoTitle)">+</button>
+</div>
