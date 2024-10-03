@@ -1,0 +1,14 @@
+<div class="container">
+ <select class="selectform" [(ngModel)]="filter" (change)="changeFilter(filter)">
+ <option value="all">All</option>
+ <option value="sort">Сортування з датою</option>
+</select>
+<ul >
+ <li *ngFor="let i of getRecipes()" class="container">
+  <p class="text">{{i.author}}</p>
+  <p class="text">{{i.decribe}}</p>
+  <p class="text">Дата створення: {{i.data}}</p>
+  <button class="addButton" (click)="onDeleteRecipe(i.id)">Видалення</button>
+ </li>
+</ul>
+</div>

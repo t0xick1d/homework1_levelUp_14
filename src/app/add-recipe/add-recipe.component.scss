@@ -1,0 +1,50 @@
+@import '../vars.scss';
+.container{ 
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ margin: 0 auto;
+ height: 100%;
+ padding: 10px;
+ opacity: 1;
+ padding: 20px;
+ position: relative;
+}
+.inputform{
+ display: block;
+ margin-bottom: 15px;
+ min-width: 100%;
+ outline: 1px solid $second-text-color;
+ border-radius:5px;
+ border-radius: 10;
+ color: $text-main-color;
+ font-size: 16;
+ font-weight: 300;
+ padding: 5;
+ width: 90%;
+ &:hover, &:focus {
+  outline: 1px solid $main-green-color;
+ }
+}
+.addButton{ 
+ align-items: center;
+ outline: 1px solid $second-text-color;
+ border-radius: 10px;
+ color: $main-green-color;
+ cursor: pointer;
+ display: flex;
+ margin-top: 15;
+ margin-right: 5;
+ padding: 0px 10px;
+ height: 46;
+ justify-content: center;
+ line-height: 143%;
+ padding: 0 25px;
+ text-transform: uppercase;
+ transition: $transitionButton;
+ &:hover {
+  background-color: $main-green-color;
+  outline: none;
+  color: #faf9f7;
+ }
+}

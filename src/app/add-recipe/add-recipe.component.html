@@ -1,0 +1,6 @@
+<div class="container">
+ <input class="inputform" type="text" placeholder="Автор" type="text" [(ngModel)]="author">
+  <input type="date" id="start" name="trip-start" class="inputform" [(ngModel)]="data"/>
+ <textarea placeholder="Рецепт" class="inputform" type="text" [(ngModel)]="decribe"></textarea>
+ <button class="addButton"(click)="onAddRecipe(author,data,decribe)">Додати</button>
+</div>
