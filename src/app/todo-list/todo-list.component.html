@@ -1,5 +1,5 @@
 <ul>
-  <li *ngFor="let i of todo">
+  <li *ngFor="let i of getTodo()">
    <p>{{i.title}} - {{i.id}}</p>
    <p>Complited: {{i.complited}}</p>
    <input type="checkbox" (change)="activeTodo(i.id)">

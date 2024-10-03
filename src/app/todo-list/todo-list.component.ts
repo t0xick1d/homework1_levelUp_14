@@ -7,16 +7,19 @@ import { TodoRepository } from '../todo.repository';
   templateUrl: './todo-list.component.html',
   styleUrls: ['./todo-list.component.scss'],
 })
-export class TodoListComponent implements OnInit {
-  public todo: Todo[] = [];
+export class TodoListComponent {
+  public todos: Todo[] = [];
   constructor(private todoReposytory: TodoRepository) {}
-  ngOnInit(): void {
-    this.todo = this.todoReposytory.getTodoList();
+  // ngOnInit(): void {
+  //   this.todos = this.todoReposytory.getTodoList();
+  // }
+  public getTodo(): Todo[] {
+    return this.todoReposytory.getTodoList();
   }
-  public onDeleteTodo(id: string): void {
+  public onDeleteTodo(id: number): void {
     this.todoReposytory.deleteTodo(id);
   }
-  public activeTodo(id: string): void {
-    this.todoReposytory.completedTodo(id);
+  public activeTodo(id: number): void {
+    this.todoReposytory.activeTodo(id);
   }
 }

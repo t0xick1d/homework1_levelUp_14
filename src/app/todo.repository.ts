@@ -10,11 +10,11 @@ export class TodoRepository {
     return this.todos;
   }
   public addTodo(title: string): void {
-    let randomId = (Math.random() + 1).toString(36).substring(7);
+    let randomId = Math.floor(Math.random() * 10000);
     const newTodo: Todo = { id: randomId, complited: false, title: title };
     this.todos.push(newTodo);
   }
-  public completedTodo(id: string): void {
+  public activeTodo(id: number): void {
     this.todos = this.todos.map((item) => {
       if (id === item.id) {
         return { ...item, complited: !item.complited };
@@ -22,7 +22,7 @@ export class TodoRepository {
       return item;
     });
   }
-  public deleteTodo(id: string): void {
+  public deleteTodo(id: number): void {
     this.todos = this.todos.filter((item) => item.id !== id);
   }
 }
